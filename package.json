@@ -1,0 +1,68 @@
+{
+  "name": "@pspark/sdk-node",
+  "version": "1.0.0",
+  "description": "Node SDK for PSpark merchant REST API",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "module": "dist/indes.js",
+  "readme": "README.md",
+  "private": false,
+  "homepage": "https://github.com/ps-park/sdk-node?tab=readme-ov-file#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ps-park/sdk-node"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc --noEmit && tsup src/index.ts --target node16 --dts --format cjs,esm --out-dir dist",
+    "lint": "prettier --check . && eslint .",
+    "lint:fix": "prettier --write . && eslint . --fix",
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "PSPARK Tech Limited",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^2.7.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@tsconfig/node-lts": "^20.1.1",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.11.30",
+    "@types/node-fetch": "^2.6.11",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.0",
+    "vitest": "^1.4.0"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
