@@ -21,6 +21,11 @@ export const invoiceCustomerSchema = z.object({
   last_name: z.string().optional().describe('Last name of the customer'),
   email: z.string().optional().describe('Email of the customer'),
   phone: z.string().optional().describe('Phone number of the customer'),
+  customer_id: z.string().optional().describe('The ID of the customer'),
+  national_id: z
+    .string()
+    .optional()
+    .describe('The national ID of the customer'),
 });
 
 export const invoiceBillingInfoSchema = z.object({

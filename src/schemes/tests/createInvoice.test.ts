@@ -12,7 +12,11 @@ const validData: CreateInvoiceRequestDto = {
   description: 'Test',
   limit_minute: 10,
   callback_url: 'https://example.com',
-  details: {},
+  details: {
+    customer: {
+      national_id: '123456789',
+    },
+  },
 };
 
 const requiredFields = ['reference', 'amount', 'currency', 'return_url'];
