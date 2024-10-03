@@ -12,7 +12,6 @@ import {
 
 export const createInvoiceRequestSchema = paymentInformationSchema.extend({
   amount: z.number().positive().describe('Payment amount'),
-  currency: z.string().describe('Currency code'),
   return_url: z
     .string()
     .describe('Url to redirect the customer after the payment'),

@@ -5,7 +5,6 @@ import {
 
 const validData: CreateInvoiceRequestDto = {
   amount: 10,
-  currency: 'USD',
   return_url: 'https://example.com',
   reference: '123',
   title: 'Test',
@@ -19,7 +18,7 @@ const validData: CreateInvoiceRequestDto = {
   },
 };
 
-const requiredFields = ['reference', 'amount', 'currency', 'return_url'];
+const requiredFields = ['reference', 'amount', 'return_url'];
 const optionalFields = [
   'title',
   'description',

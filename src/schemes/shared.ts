@@ -26,6 +26,10 @@ export const invoiceCustomerSchema = z.object({
     .string()
     .optional()
     .describe('The national ID of the customer'),
+  taxpayer_identification_number: z
+    .string()
+    .optional()
+    .describe('The tax payer identification number'),
 });
 
 export const invoiceBillingInfoSchema = z.object({
