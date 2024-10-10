@@ -42,6 +42,7 @@ export const invoiceBillingInfoSchema = z.object({
     .optional()
     .describe("Post code of the customer' address"),
   region: z.string().optional().describe("Region of the customer's country"),
+  payment_purpose: z.string().optional().describe('Payment puprose message'),
 });
 
 export const invoiceBankInfoSchema = z.object({
