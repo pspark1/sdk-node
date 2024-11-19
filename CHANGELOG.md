@@ -1,5 +1,9 @@
 This changelog references the relevant changes (bug and security fixes).
 
+**0.0.6** - _19.11.2024_
+
+- Added `bic_code` field to Bank shcema.
+
 **0.0.5** - _10.10.2024_
 
 - Added street field to BillingInfo shcema.
