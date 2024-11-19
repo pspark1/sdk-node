@@ -50,6 +50,7 @@ export const invoiceBankInfoSchema = z.object({
   account: z.string().optional(),
   id: z.string().optional(),
   name: z.string().optional(),
+  bic_code: z.string().optional(),
 });
 
 export const invoiceCardDataSchema = z.object({
