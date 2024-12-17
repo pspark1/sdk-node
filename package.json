@@ -1,6 +1,6 @@
 {
   "name": "@pspark/sdk-node",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Node SDK for PSpark merchant REST API",
   "type": "module",
   "main": "dist/index.cjs",
