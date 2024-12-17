@@ -54,13 +54,24 @@ export const invoiceBankInfoSchema = z.object({
 });
 
 export const invoiceCardDataSchema = z.object({
+  number: z.string().optional(),
   exp_month: z.string().optional(),
   exp_year: z.string().optional(),
+  cvv: z.string().optional(),
 });
 
 export const invoiceWebDataSchema = z.object({
   ip: z.string().optional(),
   user_agent: z.string().optional(),
+  browser_color_depth: z.number().optional(),
+  browser_language: z.string().optional(),
+  browser_screen_height: z.number().optional(),
+  browser_screen_width: z.number().optional(),
+  browser_timezone: z.string().optional(),
+  browser_timezone_offset: z.number().optional(),
+  browser_java_enabled: z.boolean().optional(),
+  browser_java_script_enabled: z.boolean().optional(),
+  browser_accept_header: z.string().optional(),
 });
 
 export const invoiceUISchema = z.object({

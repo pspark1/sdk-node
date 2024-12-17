@@ -1,12 +1,16 @@
 This changelog references the relevant changes (bug and security fixes).
 
+**1.0.7** - _19.11.2024_
+
+- Updated WebData and CardData schemas.
+
 **1.0.6** - _19.11.2024_
 
-- Added `bic_code` field to Bank shcema.
+- Added `bic_code` field to Bank schema.
 
 **1.0.5** - _10.10.2024_
 
-- Added street field to BillingInfo shcema.
+- Added street field to BillingInfo schema.
 
 **1.0.4** - _10.10.2024_
 
