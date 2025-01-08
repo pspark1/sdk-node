@@ -1,5 +1,9 @@
 This changelog references the relevant changes (bug and security fixes).
 
+**1.0.8** - _08.01.2025_
+
+- Added the ability to configure the base API URL
+
 **1.0.7** - _19.11.2024_
 
 - Updated WebData and CardData schemas.

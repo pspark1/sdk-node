@@ -31,6 +31,7 @@ export class PSPark {
   constructor(
     private secret: string,
     private apiKey: string,
+    private baseUrl: string = BASE_URL,
   ) {}
 
   /**
@@ -145,7 +146,7 @@ export class PSPark {
     url: string,
     requestBody: Record<string, unknown> = {},
   ): Promise<TResponseType> {
-    const fullUrl = `${BASE_URL}/${API_VERSION}/${url}`;
+    const fullUrl = `${this.baseUrl}/${API_VERSION}/${url}`;
 
     const { token, body } = signToken(this.secret, requestBody);
 
