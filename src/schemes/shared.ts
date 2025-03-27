@@ -30,6 +30,7 @@ export const invoiceCustomerSchema = z.object({
     .string()
     .optional()
     .describe('The tax payer identification number'),
+  bitrthdate: z.string().optional().describe('Date of birthday'),
 });
 
 export const invoiceBillingInfoSchema = z.object({
@@ -37,12 +38,13 @@ export const invoiceBillingInfoSchema = z.object({
   country_code: z.string().optional().describe('Country code of the customer'),
   country: z.string().optional().describe('Country of the customer'),
   city: z.string().optional().describe('City of the customer'),
+  state: z.string().optional().describe('State'),
   post_code: z
     .string()
     .optional()
     .describe("Post code of the customer' address"),
   region: z.string().optional().describe("Region of the customer's country"),
-  payment_purpose: z.string().optional().describe('Payment puprose message'),
+  payment_purpose: z.string().optional().describe('Payment purpose message'),
   street: z.string().optional().describe('Street name'),
 });
 
