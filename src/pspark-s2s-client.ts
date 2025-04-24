@@ -12,12 +12,6 @@ import {
 
 import fetch from 'node-fetch';
 
-/**
- *
- * PSPark S2S API Client
- *
- * @see https://doc.pspark.io/#section/PSPark-API
- */
 export class PSParkS2S {
   constructor(
     private secret: string,
