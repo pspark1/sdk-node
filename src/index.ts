@@ -1,4 +1,5 @@
 import { PSPark } from './pspark-client';
+import { PSParkS2S } from './pspark-s2s-client';
 
 export type {
   WalletBalance,
@@ -14,4 +15,7 @@ export type {
   CreateWithdrawalRequestDto,
 } from './schemes';
 
-export { PSPark };
+export { 
+  PSPark, 
+  PSParkS2S 
+};
