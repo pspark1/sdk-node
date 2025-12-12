@@ -25,7 +25,7 @@ import fetch from 'node-fetch';
  *
  * PSPark API Client
  *
- * @see https://doc.pspark.io/#section/PSPark-API
+ * @see https://doc.ppark.io/#section/PSPark-API
  */
 export class PSPark {
   constructor(

@@ -83,3 +83,7 @@ export const invoiceUISchema = z.object({
 export const invoiceEscrowPaymentSchema = z.object({
   payment_wallet_id: z.string().optional(),
 });
+
+export const invoiceProjectSchema = z.object({
+  url: z.string().optional().describe('Project URL'),
+});

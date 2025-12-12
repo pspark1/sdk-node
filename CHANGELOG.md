@@ -1,8 +1,24 @@
 This changelog references the relevant changes (bug and security fixes).
 
+**1.0.13** - _11.12.2025_
+
+- Update main domain.
+
+**1.0.11** - _02.05.2025_
+
+- Updated Details schema.
+
+**1.0.10** - _24.04.2025_
+
+- Added the ability to interact with a s2s API endpoint.
+
+**1.0.9** - _27.03.2025_
+
+- Added new fields to Customer and BillingInfo schemas. 
+
 **1.0.8** - _08.01.2025_
 
-- Added the ability to configure the base API URL
+- Added the ability to configure the base API URL.
 
 **1.0.7** - _19.11.2024_
 
