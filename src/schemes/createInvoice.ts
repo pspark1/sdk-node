@@ -8,6 +8,7 @@ import {
   invoiceUISchema,
   invoiceWebDataSchema,
   invoiceProjectSchema,
+  invoicePaywaySchema,
   paymentInformationSchema,
 } from './shared';
 
@@ -26,6 +27,7 @@ export const createInvoiceRequestSchema = paymentInformationSchema.extend({
       ui: invoiceUISchema.optional(),
       escrow_payment: invoiceEscrowPaymentSchema.optional(),
       project: invoiceProjectSchema.optional(),
+      payway: invoicePaywaySchema.optional(),
     })
     .optional(),
 });

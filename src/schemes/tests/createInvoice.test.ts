@@ -15,6 +15,9 @@ const validData: CreateInvoiceRequestDto = {
     customer: {
       national_id: '123456789',
     },
+    payway: {
+      pwid: 'NGN-CARD-YIO1KO',
+    },
   },
 };
 

@@ -7,7 +7,11 @@ const validData: CreateWithdrawalRequestDto = {
   reference: '123',
   amount: 10,
   account: 'address',
-  details: {},
+  details: {
+    payway: {
+      pwid: 'NGN-CARD-YIO1KO',
+    },
+  },
 };
 
 const requiredFields = ['reference', 'amount', 'account'];

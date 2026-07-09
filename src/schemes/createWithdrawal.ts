@@ -5,6 +5,7 @@ import {
   invoiceCardDataSchema,
   invoiceCustomerSchema,
   invoiceWebDataSchema,
+  invoicePaywaySchema,
 } from './shared';
 
 export const createWithdrawalRequestSchema = z.object({
@@ -23,6 +24,7 @@ export const createWithdrawalRequestSchema = z.object({
       bank: invoiceBankInfoSchema.optional(),
       card_data: invoiceCardDataSchema.optional(),
       web_data: invoiceWebDataSchema.optional(),
+      payway: invoicePaywaySchema.optional(),
     })
     .optional(),
 });
