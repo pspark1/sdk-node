@@ -1,8 +1,12 @@
 This changelog references the relevant changes (bug and security fixes).
 
-**1.0.12** - 
+**1.0.17** - 
 
 - Added new field to Customer schema. 
+
+**1.0.13** - _11.12.2025_
+
+- Update main domain.
 
 **1.0.11** - _02.05.2025_
 
