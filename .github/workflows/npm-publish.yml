@@ -1,0 +1,32 @@
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  id-token: write # ключове — дозвіл на генерацію OIDC-токена
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # trusted publishing вимагає npm >= 11.5.1
+      - run: npm install -g npm@latest
+
+      # захист від розсинхрону: тег v1.2.3 == version у package.json
+      - name: Verify tag matches package.json
+        run: |
+          TAG_VERSION=${GITHUB_REF_NAME#v}
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          [ "$TAG_VERSION" = "$PKG_VERSION" ] || { echo "::error::Tag $TAG_VERSION != package.json $PKG_VERSION"; exit 1; }
+
+      - run: npm publish

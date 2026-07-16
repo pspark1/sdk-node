@@ -30,6 +30,10 @@ export const invoiceCustomerSchema = z.object({
     .string()
     .optional()
     .describe('The tax payer identification number'),
+  documentType: z
+    .string()
+    .optional()
+    .describe('Identifier document type'),
   bitrthdate: z.string().optional().describe('Date of birthday'),
 });
 
